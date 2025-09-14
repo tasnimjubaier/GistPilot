@@ -1,0 +1,10 @@
+:root { color-scheme: light; }
+body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji'; }
+h1, h2, h3 { margin: 0.5rem 0; }
+input, button { font: inherit; }
+a { color: #2563eb; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; background: white; }
+.err { color: #b91c1c; }
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+small.hint { color: #6b7280; }

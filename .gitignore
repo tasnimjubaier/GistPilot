@@ -1,0 +1,54 @@
+node_modules
+.next
+dist
+out
+.env
+.env.local
+.DS_Store
+*.log
+
+
+
+
+# Node / Package managers
+node_modules/
+.pnpm-store/
+.npm/
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+# Build & caches
+dist/
+build/
+out/
+.next/
+.next-static/
+.next-cache/
+.vercel/
+.turbo/
+coverage/
+.cache/
+*.log
+*.tsbuildinfo
+
+# Monorepo packages
+packages/*/dist/
+packages/*/.next/
+apps/*/dist/
+apps/*/.next/
+
+# Env & local
+.env
+.env.*.local
+!.env.example
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/
