@@ -1,0 +1,22 @@
+{
+  "generatedAt": "2025-09-14T17:31:53.127Z",
+  "node": "v23.4.0",
+  "repo": {
+    "branch": "main",
+    "commit": "c0eafe9",
+    "remote": "https://github.com/tasnimjubaier/GistPilot.git"
+  },
+  "counts": {
+    "files": 72
+  },
+  "routes": [
+    "/(public)",
+    "/(public)/auth/login",
+    "/(public)/docs",
+    "/(public)/faq",
+    "/(public)/pricing",
+    "/app",
+    "/app/create",
+    "/course/[id]"
+  ]
+}

@@ -8,8 +8,15 @@ export type GeneratedCourse = {
   lessons: { moduleIndex: number; title: string; content: string }[]
 }
 
+
+// add at top (or near other types)
+export type ChatMessage = { role: 'system' | 'user' | 'assistant'; content: string }
+
+// extend the provider interface
 export type LLMProvider = {
   generateOutline(topic: string): Promise<Outline>
   generateLesson(moduleTitle: string, lessonTitle: string, topic: string): Promise<string>
   embed?(text: string): Promise<number[]>
+  // NEW:
+  chat?(messages: ChatMessage[]): Promise<string>
 }

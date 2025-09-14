@@ -1,0 +1,33 @@
+
+.wiz { color: var(--fg, #e5e7eb); }
+.wiz .stepper { display:flex; gap:8px; margin:8px 0 16px; flex-wrap:wrap }
+.wiz .chip { padding:6px 10px; border:1px solid var(--border,#1f2937); border-radius:999px; font-size:12px; opacity:.7 }
+.wiz .chip.active { background:#111827; opacity:1 }
+.wiz .panel { background:var(--card,#0f1720); border:1px solid var(--border,#1f2937); border-radius:12px; padding:12px; margin-bottom:12px }
+.wiz .row { display:grid; grid-template-columns:1fr 1fr; gap:8px }
+.wiz .input, .wiz .select, .wiz textarea { width:100%; background:#0d1520; border:1px solid var(--border,#1f2937); color:var(--fg,#e5e7eb); padding:8px 10px; border-radius:8px }
+.wiz .hint { font-size:12px; color:var(--muted,#9ca3af) }
+.wiz .btn { display:inline-flex; align-items:center; gap:8px; border:1px solid var(--border,#1f2937); background:#111827; color:#fff; padding:8px 12px; border-radius:10px; text-decoration:none }
+.wiz .btn.secondary { background:#0b0f14; color:var(--fg,#e5e7eb) }
+.wiz .actions { display:flex; gap:8px; justify-content:flex-end; margin-top:12px }
+.wiz .grid { display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:8px }
+.wiz .module { background:#0b111a; border:1px solid #1b2636; border-radius:10px; padding:10px }
+.wiz .module h4 { margin:0 0 6px; font-size:14px }
+.wiz .les { display:grid; gap:6px }
+.wiz .les input { width:100% }
+.wiz .modalbk { position:fixed; inset:0; background:rgba(0,0,0,.55); display:flex; align-items:center; justify-content:center; z-index:50 }
+.wiz .modal { background:#0f1720; border:1px solid var(--border,#1f2937); border-radius:12px; padding:16px; width:460px }
+.wiz progress { width:100%; height:10px }
+
+/* app/app/create/wizard.css */
+.wiz { color: var(--fg, #e5e7eb); }
+.wiz .stepper { display:flex; gap:8px; margin:8px 0 16px; flex-wrap:wrap }
+.wiz .chip { padding:6px 10px; border:1px solid var(--border,#1f2937); border-radius:999px; font-size:12px; opacity:.7 }
+.wiz .chip.active { background:#111827; opacity:1 }
+.wiz .panel { background:var(--card,#0f1720); border:1px solid var(--border,#1f2937); border-radius:12px; padding:12px; margin-bottom:12px }
+.wiz .input, .wiz .select, .wiz textarea { width:100%; background:#0d1520; border:1px solid var(--border,#1f2937); color:var(--fg,#e5e7eb); padding:8px 10px; border-radius:8px }
+.wiz .btn { display:inline-flex; align-items:center; gap:8px; border:1px solid var(--border,#1f2937); background:#111827; color:#fff; padding:8px 12px; border-radius:10px; text-decoration:none }
+.wiz .btn.secondary { background:#0b0f14; color:var(--fg,#e5e7eb) }
+.wiz .actions { display:flex; gap:8px; justify-content:flex-end; margin-top:12px }
+.wiz .module { background:#0b111a; border:1px solid #1b2636; border-radius:10px; padding:10px }
+.wiz .les { display:grid; gap:6px }

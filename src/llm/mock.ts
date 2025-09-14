@@ -19,6 +19,10 @@ export function createMockProvider(): LLMProvider {
     async embed(text: string) {
       // Return a small deterministic vector (not used by DB yet)
       return Array.from({length: 16}).map((_, i) => (i + text.length % 7) / 100)
-    }
+    },
+    chat: async (messages) => {
+      const last = messages.filter(m => m.role === 'user').slice(-1)[0]?.content || ''
+      return `Mock: ${last.slice(0, 400)}`
+    },
   }
 }

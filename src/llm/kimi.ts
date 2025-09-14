@@ -67,6 +67,33 @@ async function embedText(baseUrl: string, apiKey: string, model: string, input: 
   return j.data?.[0]?.embedding as number[]
 }
 
+// --- helper: OpenAI-compatible chat ---
+async function callChat(
+  baseUrl: string,
+  apiKey: string,
+  model: string,
+  messages: { role: 'system' | 'user' | 'assistant'; content: string }[],
+  temperature = 0.3
+): Promise<string> {
+  const base = baseUrl.replace(/\/+$/, '')
+  const res = await fetch(`${base}/chat/completions`, {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ model, messages, temperature, stream: false }),
+  })
+  if (!res.ok) {
+    const t = await res.text().catch(() => '')
+    throw new Error(`LLM ${res.status}: ${t || res.statusText}`)
+  }
+  const data = await res.json().catch(() => ({} as any))
+  return (
+    data?.choices?.[0]?.message?.content ??
+    data?.choices?.[0]?.delta?.content ??
+    ''
+  )
+}
+
+
 export function createKimiProvider(): LLMProvider {
   const baseUrl = process.env.LLM_BASE_URL || ''
   const apiKey = process.env.LLM_API_KEY || ''
@@ -92,6 +119,12 @@ export function createKimiProvider(): LLMProvider {
       const em = process.env.EMBED_MODEL
       if (!eb || !ek || !em) return []
       return await embedText(eb, ek, em, text)
-    }
+    },
+
+    // NEW:
+    async chat(messages) {
+      if (!baseUrl || !apiKey || !model) throw new Error('LLM env missing')
+      return await callChat(baseUrl, apiKey, model, messages)
+    },
   }
 }

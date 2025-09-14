@@ -1,0 +1,29 @@
+.viewer { display:grid; grid-template-columns: 280px 1fr 360px; min-height: 100dvh; gap: 12px; padding:12px; }
+.pane { background:#0f1720; border:1px solid #1f2937; border-radius:12px; color:#e5e7eb; }
+ 
+.left { padding:10px; }
+.center { position:relative; padding:18px 18px 40px; overflow:auto; }
+.right { padding:10px; }
+
+.reader { color:#e5e7eb; line-height:1.6; }
+.reader h1,h2,h3,h4 { margin:16px 0 8px; }
+.reader code { background:#0b111a; border:1px solid #1b2636; border-radius:6px; padding:2px 4px; }
+.reader pre { background:#0b111a; border:1px solid #1b2636; border-radius:8px; padding:12px; overflow:auto }
+
+.selbar { position:sticky; top:0; left:0; right:0; z-index:20; display:flex; gap:8px;
+  background:#0b0f14dd; border:1px solid #1f2937; border-top-left-radius:0; border-top-right-radius:0; border-bottom-left-radius:10px; border-bottom-right-radius:10px;
+  padding:8px 10px; backdrop-filter: blur(6px); align-items:center; }
+.selbar .txt { flex:1; color:#9ca3af; font-size:12px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis }
+.btn { display:inline-flex; align-items:center; gap:6px; border:1px solid #1f2937; background:#111827; color:#fff; padding:6px 10px; border-radius:8px; text-decoration:none }
+.btn.secondary { background:#0b0f14; color:#e5e7eb }
+.tabbar { display:flex; gap:6px; margin-bottom:8px }
+.tabbar button { padding:6px 10px; border:1px solid #1f2937; background:#0b0f14; color:#e5e7eb; border-radius:8px }
+.tabbar button[aria-selected="true"] { background:#1e293b; border-color:#334155 }
+.chat { display:flex; flex-direction:column; height:100% }
+.chat .log { flex:1; overflow:auto; padding:8px; display:grid; gap:8px }
+.chat .msg { background:#0b111a; border:1px solid #1b2636; border-radius:8px; padding:8px; color:#e5e7eb; }
+.tabbar button { color:#e5e7eb; }
+.chat form { display:flex; gap:8px; }
+.chat textarea { flex:1; background:#0d1520; border:1px solid #1f2937; color:#e5e7eb; border-radius:8px; padding:8px }
+.quiz .q { margin-bottom:10px; padding:8px; border:1px solid #1f2937; border-radius:8px; background:#0b111a }
+.quiz .opt { display:block; margin-top:6px }

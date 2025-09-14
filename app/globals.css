@@ -1,5 +1,14 @@
-:root { color-scheme: light; }
-body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji'; }
+:root {
+  color-scheme: light;
+  --bg:#0b0f14; --fg:#e5e7eb; --muted:#9ca3af; --card:#0f1720; --border:#1f2937; --accent:#3b82f6;
+}
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji';
+}
 h1, h2, h3 { margin: 0.5rem 0; }
 input, button { font: inherit; }
 a { color: #2563eb; text-decoration: none; }

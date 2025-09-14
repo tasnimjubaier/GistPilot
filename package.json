@@ -11,17 +11,19 @@
     "health": "node scripts/health.mjs"
   },
   "dependencies": {
+    "mammoth": "^1.10.0",
+    "mysql2": "^3.10.2",
     "next": "14.2.5",
+    "pdf-parse": "^1.1.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "mysql2": "^3.10.2",
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "typescript": "^5.6.3",
     "@types/node": "^22.5.1",
     "@types/react": "^18.3.5",
-    "@types/react-dom": "^18.3.0"
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.6.3"
   },
   "engines": {
     "node": ">=18.18.0"
