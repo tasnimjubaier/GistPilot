@@ -43,7 +43,12 @@ export async function createCourse(topic: string): Promise<Ok | Err> {
     console.log('inserted into courses')
 
     // Create modules + lessons (limit to 4 x 3)
-    const mCount = Math.min(outline.modules?.length ?? 0, 4)
+    let mCount = Math.min(outline.modules?.length ?? 0, 4)
+
+    // test code: need to get rid of : start
+    mCount = 1
+    // test code: need to get rid of : end
+    
     for (let m = 0; m < mCount; m++) {
       const mod = outline.modules[m]
       const moduleId = uuid()
@@ -53,7 +58,12 @@ export async function createCourse(topic: string): Promise<Ok | Err> {
       )
       console.log('inserted into modules- ', {m})
 
-      const lCount = Math.min(mod.lessons?.length ?? 0, 3)
+      let lCount = Math.min(mod.lessons?.length ?? 0, 3)
+
+      // test code: need to get rid of : start
+      lCount = 1
+      // test code: need to get rid of : end
+
       for (let l = 0; l < lCount; l++) {
         const les = mod.lessons[l]
         let content = ''

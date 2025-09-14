@@ -1,0 +1,47 @@
+:root { --bg:#0b0f14; --fg:#e5e7eb; --muted:#9ca3af; --card:#0f1720; --border:#1f2937; --accent:#3b82f6; }
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg)}
+a{color:var(--fg)}
+.container{max-width:1100px;margin:0 auto;padding:0 16px}
+.center{text-align:center}
+.muted{color:var(--muted)}
+
+.nav{position:sticky;top:0;z-index:30;background:rgba(11,15,20,.8);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--border)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:56px}
+.brand{font-weight:700;font-size:18px}
+.nav-links a{margin:0 8px;padding:6px 8px;border-radius:8px}
+.nav-links a.active{background:var(--card)}
+.nav-cta .btn{margin-left:8px}
+
+.footer{margin-top:64px;border-top:1px solid var(--border)}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;padding:24px 0}
+
+.btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);background:var(--card);color:var(--fg);padding:8px 14px;border-radius:10px;text-decoration:none}
+.btn:hover{border-color:#334155}
+.btn-primary{background:var(--accent);border-color:var(--accent);color:white}
+.btn[disabled]{opacity:.6;cursor:not-allowed}
+
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:center;padding:48px 0}
+.hero-copy h1{font-size:36px;line-height:1.1;margin:0 0 12px}
+.lead{color:var(--muted);font-size:16px}
+.hero-actions .btn{margin-right:8px}
+.hero-demo .demo-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px}
+.demo-title{font-weight:600;margin-bottom:8px}
+.demo-body{color:var(--muted)}
+
+.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+.price-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px}
+.price-card.featured{border-color:var(--accent)}
+.price-title{font-weight:600;margin-bottom:6px}
+.price-amount{font-size:32px;font-weight:800;margin-bottom:8px}
+.price-features{margin:8px 0 16px;padding-left:16px}
+.price-features li{margin-bottom:6px}
+
+.faq-list{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+.faq{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px}
+summary{cursor:pointer;font-weight:600}
+
+.section{padding:32px 0}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.small{font-size:12px;color:var(--muted)}
