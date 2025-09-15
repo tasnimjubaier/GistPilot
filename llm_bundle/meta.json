@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2025-09-14T17:31:53.127Z",
+  "generatedAt": "2025-09-14T19:49:00.100Z",
   "node": "v23.4.0",
   "repo": {
     "branch": "main",
-    "commit": "c0eafe9",
+    "commit": "a4ed098",
     "remote": "https://github.com/tasnimjubaier/GistPilot.git"
   },
   "counts": {
-    "files": 72
+    "files": 75
   },
   "routes": [
     "/(public)",
@@ -17,6 +17,7 @@
     "/(public)/pricing",
     "/app",
     "/app/create",
-    "/course/[id]"
+    "/course/[id]",
+    "/graphs"
   ]
 }
